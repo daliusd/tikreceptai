@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const allRecipes = await getCollection('receptai');
+  const uniqueTags = [...new Set(allRecipes.map((recipe) => recipe.data.tags).flat())];
+
+  return uniqueTags.map((tag) => {
+    const filteredRecipes = allRecipes
+      .filter((recipe) => recipe.data.tags.includes(tag))
+      .sort((a, b) => a.slug.localeCompare(b.slug));
+    return {
+      params: { tag },
+      props: { recipes: filteredRecipes },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { recipes } = Astro.props;
+---
+
+<BaseLayout pageTitle={`Receptai pažymėti: ${tag}`}>
+  <ul>
+    {
+      recipes.map((recipe) => (
+        <li>
+          <a href={`/receptai/${recipe.slug}`}>{recipe.data.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>

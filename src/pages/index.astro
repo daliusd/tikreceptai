@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const allRecipes = await getCollection('receptai');
+const tags = [...new Set(allRecipes.map((recipe) => recipe.data.tags).flat())].sort();
+
+const lastRecipes = allRecipes.sort((a, b) => +b.data.pubDate - +a.data.pubDate).slice(0, 5);
+
+const pageTitle = 'Pagrindinis';
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <h2>Naujausi receptai</h2>
+  <ul>
+    {
+      lastRecipes.map((recipe) => (
+        <li>
+          <a href={`/receptai/${recipe.slug}`}>{recipe.data.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <h2>Žymės</h2>
+  <ul>
+    <div>
+      {
+        tags.map((tag) => (
+          <span>
+            <a href={`/tags/${tag}`}>{tag}</a>
+          </span>
+        ))
+      }
+    </div>
+  </ul>
+</BaseLayout>
