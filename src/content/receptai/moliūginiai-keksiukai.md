@@ -1,5 +1,5 @@
 ---
-title: 'Kakaviniai keksiukai'
+title: 'Moliūginiai keksiukai'
 pubDate: 2024-02-15
 author: 'Dalius'
 tags: ['moliūgas', 'desertas', 'orkaitė']
