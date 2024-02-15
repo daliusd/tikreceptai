@@ -1,5 +1,5 @@
 ---
-title: 'Lešių troškinys'
+title: 'Mieliniai blynai'
 pubDate: 2024-02-15
 author: 'Dalius'
 tags: ['desertas', 'keptuvė']
