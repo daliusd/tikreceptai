@@ -1,5 +1,6 @@
 ---
 title: 'Lašiša kepta folijoje'
+pubDate: 2024-02-15
 author: 'Dalius'
 tags: ['lašiša', 'pagrindinis', 'orkaitė']
 ---
