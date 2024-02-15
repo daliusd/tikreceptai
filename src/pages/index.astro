@@ -22,15 +22,13 @@ const pageTitle = 'Pagrindinis';
   </ul>
 
   <h2>Žymės</h2>
-  <ul>
-    <div>
-      {
-        tags.map((tag) => (
-          <span>
-            <a href={`/tags/${tag}`}>{tag}</a>
-          </span>
-        ))
-      }
-    </div>
-  </ul>
+  <div>
+    {
+      tags.map((tag) => (
+        <span>
+          <a href={`/tags/${tag}`}>{tag}</a>
+        </span>
+      ))
+    }
+  </div>
 </BaseLayout>

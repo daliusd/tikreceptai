@@ -5,5 +5,14 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout pageTitle={frontmatter.title}>
   <p>Autorius: {frontmatter.author}</p>
+  <p>
+    Žymės: {
+      frontmatter.tags.map((tag, idx) => (
+        <span>
+          <a href={`/tags/${tag}`}>{tag}</a>
+        </span>
+      ))
+    }
+  </p>
   <slot />
 </BaseLayout>
