@@ -1,5 +1,7 @@
 # Tik Receptai
 
+Veikiantis puslapis čia: [https://tikreceptai.netlify.app/](https://tikreceptai.netlify.app/)
+
 ## Jeigu norite pridėti naują receptą
 
 Sukurkite naują `.md` failą [./src/content/receptai/](./src/content/receptai/)
@@ -23,3 +25,9 @@ Tada sekcijoje `## Ko reikės?` nurodykite produktų sąrašą, o sekcijoje `## 
 gaminti?` gaminimo žingsnius.
 
 Sukurkite Pull Request'ą ir laukite kol jį patvirtinsiu.
+
+## Jeigu pastebėjote klaidą
+
+- Užregistruokite naują problemą `Issues` skiltyje
+
+- Sutaisykite problemą ir sukurkite naują PRą
