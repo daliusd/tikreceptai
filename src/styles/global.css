@@ -9,6 +9,7 @@ body {
   max-width: 80ch;
   padding: 1rem;
   line-height: 1.5;
+  font-size: 20px;
 }
 
 a,
@@ -28,13 +29,18 @@ a:hover {
 
 h1 {
   margin: 1rem 0;
-  font-size: 2.5rem;
+  font-size: 1.75rem;
+}
+
+h2 {
+  margin: 1rem 0;
+  font-size: 1.25rem;
 }
 
 /* nav styles */
 
 .header {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 100;
   font-style: italic;
 
@@ -54,7 +60,9 @@ h1 {
 
 .nav-links {
   width: 100%;
-  margin-bottom: 2em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px dashed grey;
 }
 
 .nav-links a {
@@ -62,7 +70,7 @@ h1 {
   text-align: center;
   padding: 10px 0;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -83,6 +91,20 @@ h1 {
   .nav-links a {
     display: inline-block;
     padding: 5px 20px;
+  }
+
+  body {
+    font-size: 18px;
+  }
+
+  h1 {
+    margin: 1rem 0;
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    margin: 1rem 0;
+    font-size: 1.25rem;
   }
 
 }
