@@ -20,9 +20,15 @@ const pageTitle = 'Pagrindinis';
       ))
     }
   </ul>
+  <p>
+    Čia galima rasti <a href="/visi/">visų receptų sąrašą</a>.
+  </p>
 
   <h2>Žymės</h2>
-  <div>
+
+  <p>Taip pat galima ieškoti receptų pagal žymes:</p>
+
+  <p>
     {
       tags.map((tag) => (
         <span>
@@ -30,5 +36,5 @@ const pageTitle = 'Pagrindinis';
         </span>
       ))
     }
-  </div>
+  </p>
 </BaseLayout>

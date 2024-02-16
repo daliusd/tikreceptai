@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const allRecipes = (await getCollection('receptai')).sort((a, b) => {
+  const dateDiff = +b.data.pubDate - +a.data.pubDate;
+  if (dateDiff === 0) {
+    return a.data.title.localeCompare(b.data.title);
+  }
+
+  return dateDiff;
+});
+
+const pageTitle = 'Visi';
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <h2>Visi receptai</h2>
+  <ul>
+    {
+      allRecipes.map((recipe) => (
+        <li>
+          <a href={`/receptai/${recipe.slug}`}>{recipe.data.title}</a> {recipe.data.pubDate.toISOString().slice(0, 10)}
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>
